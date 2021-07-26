@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { of, Subscription } from 'rxjs';
 import { colors } from '../../../../consts';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-news-feed',
@@ -81,5 +82,10 @@ export class NewsFeedComponent implements OnInit {
         author +
         '.json?print=pretty'
     );
+  }
+
+  formatTime(timestamp){
+    return moment(new Date(timestamp*1000)).fromNow();;
+
   }
 }
