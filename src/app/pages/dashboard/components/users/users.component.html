@@ -1,0 +1,29 @@
+<mat-card flex-gt-sm>
+  <mat-card-title>User Profile</mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-list>
+    <mat-list-item>
+      <mat-icon matListAvatar>account_box</mat-icon>
+      <h4 matLine>{{user.id}}</h4>
+      <p matLine>User</p>
+    </mat-list-item>
+    <mat-divider matInset></mat-divider>
+    <mat-list-item>
+      <mat-icon matListAvatar>access_time</mat-icon>
+      <h4 matLine>{{user.created}}</h4>
+      <p matLine>Created</p>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon matListAvatar>assistant</mat-icon>
+      <h4 matLine>{{user.karma}}</h4>
+      <p matLine>karma</p>
+    </mat-list-item>
+    <mat-divider matInset></mat-divider>
+    <mat-list-item>
+      <mat-icon matListAvatar>description</mat-icon>
+      <h4 matLine>{{user.about}}</h4>
+      <p matLine>About</p>
+    </mat-list-item>
+    <mat-divider matInset></mat-divider>
+  </mat-list>
+</mat-card>
