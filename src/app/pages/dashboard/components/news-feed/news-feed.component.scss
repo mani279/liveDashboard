@@ -1,0 +1,54 @@
+@import "src/app/styles/colors";
+@import "src/app/styles/font";
+@import "src/app/styles/variables";
+
+.news-feed {
+  height: 45px;
+  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+
+  &__header {
+    color: $grey;
+    display: flex;
+    justify-content: space-between;
+
+    &-title {
+      font-size: 12px;
+      font-weight: $fw-lighter;
+      margin: 0;
+      line-height: 40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-chart {
+      height: 140px;
+      width: 100%;
+      max-width: 218px
+    }
+  }
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.search-hero {
+  max-width: 700px;
+}
+.news-feed:hover {
+  background-color: #b0b4eb;
+  cursor: pointer;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: space-between;
+}

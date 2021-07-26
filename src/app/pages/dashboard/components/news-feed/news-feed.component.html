@@ -1,0 +1,23 @@
+<div class="page">
+  <mat-toolbar class="page-header" role="heading">
+    <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+        placeholder="Search by title, user...">
+    </div>
+    <mat-radio-group aria-label="Select an option" [(ngModel)]="selectedOption">
+      <mat-radio-button *ngFor="let option of options" [value]="option.value"
+        (change)="getHackerNewsData(option.value)">{{option.label}}</mat-radio-button>
+    </mat-radio-group>
+  </mat-toolbar>
+</div>
+<mat-card class="news-feed" *ngFor="let data of dataSource | filter:searchText; index as i"
+  (click)="newsDetails(data.url)">
+  <mat-card-header>
+    <mat-card-title>{{i+1}}. {{data.title}}</mat-card-title>
+    <mat-card-subtitle>{{data.score}} points by <a [routerLink]="['/user',data.by]">
+        <span class="badge">
+          {{data.by}}
+        </span>
+      </a> 1 hour ago | {{data.descendants}} comments</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
