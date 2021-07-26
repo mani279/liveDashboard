@@ -3,8 +3,10 @@
 @import "src/app/styles/variables";
 
 .news-feed {
-  height: 45px;
+  min-height: 50px;
+  max-height: 100px;
   box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  margin: 5px;
 
   &__header {
     color: $grey;
@@ -33,6 +35,10 @@
 }
 .mat-radio-button ~ .mat-radio-button {
   margin-left: 16px;
+}
+
+mat-card-subtitle.mat-card-subtitle {
+    padding-left: 50px;
 }
 
 .search-hero {
