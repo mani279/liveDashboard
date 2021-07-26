@@ -84,8 +84,7 @@ export class NewsFeedComponent implements OnInit {
     );
   }
 
-  formatTime(timestamp){
-    return moment(new Date(timestamp*1000)).fromNow();;
-
+  formatTime(timestamp) {
+    return moment(new Date(timestamp * 1000)).fromNow();
   }
 }

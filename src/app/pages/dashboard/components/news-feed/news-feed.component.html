@@ -16,9 +16,9 @@
     <mat-card-title>{{i+1}}. <mat-icon>arrow_drop_up</mat-icon>
       {{data.title}}</mat-card-title>
     <mat-card-subtitle>{{data.score}} points by <a [routerLink]="['/user',data.by]">
-        <span class="badge">
+        <span>
           {{data.by}}
         </span>
-      </a> {{formatTime(data.time)}} | {{data.descendants}} comments</mat-card-subtitle>
+      </a> <span class="badge">{{formatTime(data.time)}}</span> | <span>{{data.descendants}} comments</span></mat-card-subtitle>
   </mat-card-header>
 </mat-card>

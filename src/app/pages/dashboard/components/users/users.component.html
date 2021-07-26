@@ -1,4 +1,4 @@
-<mat-card flex-gt-sm>
+<mat-card flex-gt-sm >
   <mat-card-title>User Profile</mat-card-title>
   <mat-divider></mat-divider>
   <mat-list>
@@ -10,9 +10,10 @@
     <mat-divider matInset></mat-divider>
     <mat-list-item>
       <mat-icon matListAvatar>access_time</mat-icon>
-      <h4 matLine>{{user.created}}</h4>
+      <h4 matLine>{{formatTime(user.created)}}</h4>
       <p matLine>Created</p>
     </mat-list-item>
+    <mat-divider matInset></mat-divider>
     <mat-list-item>
       <mat-icon matListAvatar>assistant</mat-icon>
       <h4 matLine>{{user.karma}}</h4>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
 import { Subscription } from 'rxjs';
+import * as moment from 'moment';
 
 @Component({
   selector: 'user-details',
@@ -33,5 +34,9 @@ export class UserDetailComponent implements OnInit {
         this.feed = data;
         this.user = this.feed;
       });
+  }
+
+  formatTime(timestamp) {
+    return moment(new Date(timestamp * 1000)).fromNow();
   }
 }
